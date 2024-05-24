@@ -1,71 +1,39 @@
-# Getting Started with Create React App
+# Improvements Breakdown
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Initial Setup and Conversion to React
 
-## Available Scripts
+- **Converted HTML, CSS, and JavaScript to a React application**:
+  - Set up a new React project using `create-react-app`.
+  - Created components for the board, rows, cells, and input.
+  - Refactored JavaScript logic into React hooks and components.
 
-In the project directory, you can run:
+## Core Functionality Implementation
 
-### `npm start`
+- **Implemented the core game logic**:
+  - Fetch a random 5-letter word from an API.
+  - Display the game board with 6 rows and 5 cells each.
+  - Allow users to input their guesses.
+  - Compare the guesses to the answer and color the cells appropriately:
+    - Green for correct letters in the correct position.
+    - Yellow for correct letters in the wrong position.
+    - Gray for incorrect letters.
+  - Track the number of attempts and display a game-over message if the user fails to guess the word in 6 attempts.
+  - Provide a reset button to start a new game.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Enhancements and Improvements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Added keyboard input handling**:
+  - Users can submit their guesses by pressing the Enter key.
+- **Displayed guessed letters**:
+  - Track and display letters that have been guessed, ensuring each letter is only displayed once.
+- **Improved the coloring logic**:
+  - Ensure letters are colored correctly, taking into account the number of times each letter appears in the answer.
+- **Ensured proper state management**:
+  - Made deep copies of state arrays to avoid direct mutation.
 
-### `npm test`
+## Responsive Design Implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# guessr-2
+- **Updated CSS for responsiveness**:
+  - Used Flexbox and CSS Grid to create a flexible layout.
+  - Applied media queries to adjust the layout and styles for smaller screen sizes.
+  - Ensured the game board, input, and buttons resize appropriately on different devices.
