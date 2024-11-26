@@ -10,24 +10,20 @@ const App = () => {
   const [guessedLetters, setGuessedLetters] = useState(new Set());
 
                                 const fetchRandomWord = useCallback(async () => {
-                  try {
-                    const response = await fetch('https://api.api-ninjas.com/v1/randomword?type=noun', {
-                      headers: {
-                        'X-Api-Key': '0TW5Q6Zj5XsNyVKL3zU9aw==cDGcjCPyt4u3ksGm'
-                      }
-                    });
-                    const data = await response.json();
-                    const word = data.word[0]; // Extract the word from the array
-                    if (word.length === 5 && !word.endsWith('s')) {
-                      setAnswer(word.toUpperCase());
-               //       console.log(word.toUpperCase());
-                    } else {
-                      fetchRandomWord();
-                    }
-                  } catch (error) {
-                    console.error('Error fetching word', error);
-                  }
-                }, []);
+                                  try {
+                                    const response = await fetch('https://random-word-api.vercel.app/api?words=1&length=5');
+                                    const words = await response.json();
+                                    const word = words[0]; // Extract the word from the array
+                                    if (word.length === 5 && !word.endsWith('s')) {
+                                      setAnswer(word.toUpperCase());
+                                      console.log(word.toUpperCase());
+                                    } else {
+                                      fetchRandomWord();
+                                    }
+                                  } catch (error) {
+                                    console.error('Error fetching word', error);
+                                  }
+                                }, []);
 
   const submitGuess = useCallback(() => {
     if (currentGuess.length !== 5) {
