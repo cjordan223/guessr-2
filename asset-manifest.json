@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/guessr-2/static/css/main.844cca51.css",
-    "main.js": "/guessr-2/static/js/main.9350d755.js",
+    "main.js": "/guessr-2/static/js/main.f6999a12.js",
     "index.html": "/guessr-2/index.html",
     "main.844cca51.css.map": "/guessr-2/static/css/main.844cca51.css.map",
-    "main.9350d755.js.map": "/guessr-2/static/js/main.9350d755.js.map"
+    "main.f6999a12.js.map": "/guessr-2/static/js/main.f6999a12.js.map"
   },
   "entrypoints": [
     "static/css/main.844cca51.css",
-    "static/js/main.9350d755.js"
+    "static/js/main.f6999a12.js"
   ]
 }
