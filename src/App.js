@@ -9,20 +9,25 @@ const App = () => {
   const [message, setMessage] = useState('');
   const [guessedLetters, setGuessedLetters] = useState(new Set());
 
-    const fetchRandomWord = useCallback(async () => {
-    try {
-      const response = await fetch('https://random-word-form.repl.co/random/noun?count=1');
-      const words = await response.json();
-      if (words.length > 0 && !words[0].endsWith('s')) {
-        setAnswer(words[0].toUpperCase());
-        console.log(words[0].toUpperCase());
-      } else {
-        fetchRandomWord();
-      }
-    } catch (error) {
-      console.error('Error fetching word', error);
-    }
-  }, []);
+                                const fetchRandomWord = useCallback(async () => {
+                  try {
+                    const response = await fetch('https://api.api-ninjas.com/v1/randomword?type=noun', {
+                      headers: {
+                        'X-Api-Key': '0TW5Q6Zj5XsNyVKL3zU9aw==cDGcjCPyt4u3ksGm'
+                      }
+                    });
+                    const data = await response.json();
+                    const word = data.word[0]; // Extract the word from the array
+                    if (word.length === 5 && !word.endsWith('s')) {
+                      setAnswer(word.toUpperCase());
+               //       console.log(word.toUpperCase());
+                    } else {
+                      fetchRandomWord();
+                    }
+                  } catch (error) {
+                    console.error('Error fetching word', error);
+                  }
+                }, []);
 
   const submitGuess = useCallback(() => {
     if (currentGuess.length !== 5) {
