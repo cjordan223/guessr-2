@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/guessr-2/static/css/main.6e9f21c8.css",
-    "main.js": "/guessr-2/static/js/main.00edd896.js",
+    "main.css": "/guessr-2/static/css/main.4bcbd760.css",
+    "main.js": "/guessr-2/static/js/main.3e2f8519.js",
     "index.html": "/guessr-2/index.html",
-    "main.6e9f21c8.css.map": "/guessr-2/static/css/main.6e9f21c8.css.map",
-    "main.00edd896.js.map": "/guessr-2/static/js/main.00edd896.js.map"
+    "main.4bcbd760.css.map": "/guessr-2/static/css/main.4bcbd760.css.map",
+    "main.3e2f8519.js.map": "/guessr-2/static/js/main.3e2f8519.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e9f21c8.css",
-    "static/js/main.00edd896.js"
+    "static/css/main.4bcbd760.css",
+    "static/js/main.3e2f8519.js"
   ]
 }
