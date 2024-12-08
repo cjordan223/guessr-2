@@ -1,0 +1,32 @@
+.guessed-letters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.letters-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.guessed-letters h3 {
+  font-size: 0.9em;
+  color: #868e96;
+  margin-bottom: 10px;
+}
+
+.guessed-letter {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #339af0;
+  padding: 0 5px;
+} 
