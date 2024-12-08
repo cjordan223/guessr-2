@@ -34,6 +34,7 @@ body {
 }
 
 .game-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,15 +165,16 @@ p {
 }
 
 .error-message {
+  width: 100%;
   background-color: #fff5f5;
   color: #c92a2a;
   padding: 10px 20px;
   border-radius: 8px;
   border: 1px solid #ffa8a8;
-  margin: 10px 0;
   text-align: center;
   font-weight: 500;
   animation: shake 0.5s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes shake {

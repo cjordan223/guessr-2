@@ -179,18 +179,6 @@ const App = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="game-section">
-          {error && (
-            <motion.div 
-              className="error-message"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {error}
-            </motion.div>
-          )}
-          
           <GameBoard board={board} />
           
           <div className="input-container">
@@ -227,6 +215,17 @@ const App = () => {
         <div className="side-section">
           <GameStats attempts={attempts} totalGames={totalGames} wins={wins} />
           <GameGuessedLetters guessedLetters={guessedLetters} />
+          {error && (
+            <motion.div 
+              className="error-message"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {error}
+            </motion.div>
+          )}
           {message && (
             <motion.div 
               className={`message-container ${currentGuess === answer ? 'message-success' : 'message-error'}`}
