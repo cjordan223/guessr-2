@@ -1,4 +1,4 @@
-# Word Guessr
+# Word Guesser
 
 A modern, interactive word-guessing game built with React. Inspired by Wordle, this game challenges players to guess a 5-letter word within 6 attempts.
 
