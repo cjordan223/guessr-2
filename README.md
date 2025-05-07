@@ -1,39 +1,65 @@
-# Improvements Breakdown
+# Word Guessr
 
-## Initial Setup and Conversion to React
+A modern, interactive word-guessing game built with React. Inspired by Wordle, this game challenges players to guess a 5-letter word within 6 attempts.
 
-- **Converted HTML, CSS, and JavaScript to a React application**:
-  - Set up a new React project using `create-react-app`.
-  - Created components for the board, rows, cells, and input.
-  - Refactored JavaScript logic into React hooks and components.
+[Try it live](https://cjordan223.github.io/guessr-2/)
 
-## Core Functionality Implementation
+## Features
 
-- **Implemented the core game logic**:
-  - Fetch a random 5-letter word from an API.
-  - Display the game board with 6 rows and 5 cells each.
-  - Allow users to input their guesses.
-  - Compare the guesses to the answer and color the cells appropriately:
-    - Green for correct letters in the correct position.
-    - Yellow for correct letters in the wrong position.
-    - Gray for incorrect letters.
-  - Track the number of attempts and display a game-over message if the user fails to guess the word in 6 attempts.
-  - Provide a reset button to start a new game.
+- 🎮 Interactive game board with 6 attempts to guess a 5-letter word
+- 🎯 Real-time feedback with color-coded letters:
+  - 🟩 Green: Correct letter in correct position
+  - 🟨 Yellow: Correct letter in wrong position
+  - ⬜ Gray: Letter not in word
+- 📊 Game statistics tracking (attempts, win rate)
+- ⌨️ Keyboard support for input
+- 📱 Responsive design for all devices
+- ✨ Modern UI with smooth animations
+- 🌟 Particle background effects
 
-## Enhancements and Improvements
+## Technologies Used
 
-- **Added keyboard input handling**:
-  - Users can submit their guesses by pressing the Enter key.
-- **Displayed guessed letters**:
-  - Track and display letters that have been guessed, ensuring each letter is only displayed once.
-- **Improved the coloring logic**:
-  - Ensure letters are colored correctly, taking into account the number of times each letter appears in the answer.
-- **Ensured proper state management**:
-  - Made deep copies of state arrays to avoid direct mutation.
+- React 18
+- Framer Motion for animations
+- TSParticles for background effects
+- Modern CSS with Flexbox and Grid
+- Random Word API for word generation
 
-## Responsive Design Implementation
+## Getting Started
 
-- **Updated CSS for responsiveness**:
-  - Used Flexbox and CSS Grid to create a flexible layout.
-  - Applied media queries to adjust the layout and styles for smaller screen sizes.
-  - Ensured the game board, input, and buttons resize appropriately on different devices.
+1. Clone the repository:
+```bash
+git clone https://github.com/cjordan223/guessr-2.git
+```
+
+2. Install dependencies:
+```bash
+cd guessr-2
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+
+
+## How to Play
+
+1. The game will generate a random 5-letter word
+2. Enter your guess in the input field
+3. After each guess, the letters will be color-coded:
+   - Green: Letter is correct and in the right position
+   - Yellow: Letter is in the word but in the wrong position
+   - Gray: Letter is not in the word
+4. You have 6 attempts to guess the word
+5. Use the feedback from each guess to narrow down the possibilities
+
+## Contributing
+
+Feel free to submit issues and enhancement requests
+
+## License
+
+This project is open source and available under the MIT License.

@@ -2,7 +2,7 @@ import React from 'react';
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
 
-const ParticleBackground = () => {
+const ParticleBackground = React.memo(() => {
   const particlesInit = async (engine) => {
     await loadSlim(engine);
   };
@@ -60,6 +60,6 @@ const ParticleBackground = () => {
       }}
     />
   );
-};
+});
 
-export default ParticleBackground; 
+export default ParticleBackground;
